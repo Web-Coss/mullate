@@ -1,0 +1,48 @@
+@use 'pallete' as *;
+
+:root {
+  // Primary
+  --Primary-Normal: #{$Brown-50};
+  --Primary-Alternative: #{$Brown-40};
+  --Primary-Assistive: #{$Brown-90};
+
+  // Secondary
+  --Secondary-Normal: #{$Orange-50};
+  --Secondary-Alternative: #{$Orange-40};
+  --Secondary-Assistive: #{$Orange-90};
+
+  // Label
+  --Label-Normal: #{$Neutral-5};
+  --Label-Strong: #{$Common-100};
+  --Label-Neutral: #{$Neutral-25};
+  --Label-Alternative: #{$Neutral-40};
+  --Label-Assistive: #{$Neutral-50};
+  --Label-Disable: #{$Neutral-97};
+
+  // Line
+  --Line-Normal: #{$Neutral-90};
+  --Line-Neutral: #{$Neutral-95};
+  --Line-Alternative: #{$Neutral-97};
+
+  // Fill
+  --Fill-Normal: #{$Brown-95};
+  --Fill-Neutral: #{$Brown-90};
+  --Fill-Alternative: #{$Brown-80};
+  --Fill-Support: #{$Common-00};
+  --Fill-Assistive: #{$Brown-95};
+
+  // Background
+  --Background-Normal: #{$Brown-99};
+  --Background-Neutral: #{$Brown-95};
+  --Background-Alternative: #{$Brown-90};
+
+  // Status
+  --Status-Negative: #{$Red-50};
+  --Status-Cautionary: #{$Yellow-50};
+  --Status-Positive: #{$Green-50};
+  --Status-Info: #{$Orange-50};
+
+  // Static
+  --Static-White: #{$Common-00};
+  --Static-Black: #{$Common-100};
+}

@@ -1,0 +1,21 @@
+@use "../color/sementic" as *;
+
+.Toastify__progress-bar {
+  height: 4px;
+}
+
+.progress-success {
+  background-color: var(--Status-Negative) !important;
+}
+
+.progress-error {
+  background-color: var(--Status-Negative) !important;
+}
+
+.progress-warning {
+  background-color: var(--Status-Cautionary) !important;
+}
+
+.progress-info {
+  background-color: var(--Status-Info) !important;
+}

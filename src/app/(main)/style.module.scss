@@ -1,0 +1,6 @@
+@use "../../styles/function/flex" as *;
+
+.main {
+  @include flex-column;
+  width: 100vw;
+}

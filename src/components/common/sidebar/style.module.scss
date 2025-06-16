@@ -1,0 +1,26 @@
+@use "src/styles/function/flex";
+
+.sidebar {
+  @include flex.flex-column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 15px 0;
+
+  .logo {
+    justify-content: center;
+    padding: 40px;
+  }
+
+  .menu {
+    @include flex.flex-column;
+    gap: 15px;
+
+    .menuItem {
+      display: flex;
+      padding: 10px 20px;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+
+}
