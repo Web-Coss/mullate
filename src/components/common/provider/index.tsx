@@ -4,7 +4,7 @@ import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "src/src/styles/toast/style.scss"
-import "src/src/styles/page.tsx.style.scss"
+import "src/src/styles/page.style.scss"
 import "src/src/styles/global.style.scss";
 import "src/src/styles/shape/_shape.scss";
 import "src/src/styles/color/_sementic.scss";
