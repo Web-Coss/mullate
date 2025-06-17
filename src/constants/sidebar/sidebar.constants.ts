@@ -25,12 +25,12 @@ export const SIDEBAR_MENUS: SidebarMenu[] = [
         icon: Receipt,
     },
     {
-        href: "/menu",
+        href: "/menus",
         label: "메뉴 관리",
         icon: Coffee,
     },
     {
-        href: "/category",
+        href: "/categories",
         label: "카테고리 관리",
         icon: Folder,
     },

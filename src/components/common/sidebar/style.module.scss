@@ -1,7 +1,8 @@
-@use "src/styles/function/flex";
+@use "src/styles/function/flex" as *;
+@use "src/styles/fonts/typography" as *;
 
 .sidebar {
-  @include flex.flex-column;
+  @include flex-column;
   justify-content: space-between;
   height: 100%;
   padding: 15px 0;
@@ -12,15 +13,60 @@
   }
 
   .menu {
-    @include flex.flex-column;
+    @include flex-column;
     gap: 15px;
 
     .menuItem {
       display: flex;
       padding: 10px 20px;
+      border-radius: var(--Shape-Medium);
       align-items: center;
       gap: 15px;
+      transition: background-color 0.3s ease;
+
+      span {
+        @include HeadLine2-Medium;
+        color: var(--Label-Normal);
+        transition: color 0.3s ease;
+      }
+
+      &.active {
+        background-color: var(--Primary-Normal);
+        color: var(--Label-Disable);
+
+        span {
+          color: var(--Label-Disable);
+        }
+      }
     }
   }
+}
 
+.languageSwitcher {
+  @include flex-center;
+  gap: 10px;
+  padding: 20px 0;
+
+  a {
+    @include Body-Medium;
+    text-decoration: none;
+    color: var(--Label-Normal);
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 2px;
+  }
+
+  a:hover {
+    color: var(--Primary-Normal);
+  }
+
+  .activeLang {
+    @include Body-Bold;
+    color: var(--Primary-Normal);
+    border-bottom: 2px solid var(--Primary-Normal);
+  }
+
+  .separator {
+    @include Body-Medium;
+    color: var(--Label-Disable);
+  }
 }
