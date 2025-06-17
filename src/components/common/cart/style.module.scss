@@ -1,0 +1,84 @@
+@use "src/styles/fonts/typography" as *;
+@use "src/styles/function/flex" as *;
+
+.cart {
+  @include flex-column;
+  width: 300px;
+  padding: 24px;
+  background-color: var(--Fill-Normal);
+  border-radius: var(--Shape-Large);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  gap: 20px;
+}
+
+.header {
+  h2 {
+    @include HeadLine1-Medium;
+    color: var(--Label-Normal);
+  }
+}
+
+.itemList {
+  @include flex-column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 12px;
+}
+
+.item {
+  @include flex-between;
+  align-items: center;
+
+  .name {
+    @include Body-Medium;
+    color: var(--Label-Assistive);
+  }
+
+  .qty {
+    @include Label-Medium;
+    color: var(--Label-Alternative);
+    margin-left: 6px;
+  }
+
+  .price {
+    @include Label-Bold;
+    color: var(--Label-Strong);
+  }
+}
+
+.empty {
+  @include Label-Medium;
+  color: var(--Label-Neutral);
+}
+
+.total {
+  @include flex-between;
+  border-top: 1px solid var(--Line-Normal);
+  padding-top: 16px;
+
+  p {
+    @include Body-Medium;
+    color: var(--Label-Assistive);
+  }
+
+  strong {
+    @include Body-Bold;
+    color: var(--Label-Normal);
+  }
+}
+
+.button {
+  @include Label-Medium;
+  background-color: var(--Primary-Normal);
+  color: var(--Fill-Normal);
+  border: none;
+  border-radius: var(--Shape-Small);
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--Primary-Alternative);
+  }
+}

@@ -30,7 +30,7 @@ export const SIDEBAR_MENUS: SidebarMenu[] = [
         icon: Coffee,
     },
     {
-        href: "/categories",
+        href: "/category",
         label: "카테고리 관리",
         icon: Folder,
     },

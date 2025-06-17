@@ -1,0 +1,93 @@
+@use "src/styles/function/flex" as *;
+@use "src/styles/fonts/typography" as *;
+
+.card {
+  @include flex-column;
+  background-color: var(--Fill-Normal);
+  border-radius: var(--Shape-Large);
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.content {
+  @include flex-column;
+  gap: 10px;
+}
+
+.footer {
+  margin-top: 16px;
+}
+
+.image {
+  border-radius: var(--Shape-Medium);
+  object-fit: cover;
+  align-self: center;
+}
+
+.name {
+  @include HeadLine1-Bold;
+}
+
+.price {
+  @include HeadLine2-Medium;
+}
+
+.options {
+  @include flex-column;
+  gap: 8px;
+}
+
+.optionGroup {
+  @include flex-column;
+
+  label {
+    @include Label-Medium;
+    margin-bottom: 4px;
+    color: var(--Label-Assistive);
+  }
+
+  .chips {
+    display: flex;
+    gap: 8px;
+
+    span {
+      padding: 4px 8px;
+      border-radius: var(--Shape-ExtraSmall);
+      background-color: var(--Fill-Neutral);
+      @include Caption-Regular;
+      cursor: pointer;
+    }
+  }
+}
+
+.button {
+  background-color: var(--Primary-Normal);
+  color: var(--Fill-Normal);
+  padding: 10px;
+  width: 100%;
+  border-radius: var(--Shape-Small);
+  border: none;
+  cursor: pointer;
+  margin-top: auto;
+  @include Label-Medium;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+
+  span {
+    padding: 4px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    @include Caption-Regular;
+  }
+
+  .selected {
+    color: var(--Primary-Alternative);
+    font-weight: bold;
+  }
+}

@@ -2,8 +2,8 @@
 
 :root {
   // Primary
-  --Primary-Normal: #{$Brown-50};
-  --Primary-Alternative: #{$Brown-40};
+  --Primary-Normal: #5b3f27;
+  --Primary-Alternative: #{$Brown-50};
   --Primary-Assistive: #{$Brown-90};
 
   // Secondary
@@ -25,9 +25,9 @@
   --Line-Alternative: #{$Neutral-97};
 
   // Fill
-  --Fill-Normal: #{$Brown-95};
-  --Fill-Neutral: #{$Brown-90};
-  --Fill-Alternative: #{$Brown-80};
+  --Fill-Normal: #{$Neutral-97};
+  --Fill-Neutral: #{$Neutral-95};
+  --Fill-Alternative: #{$Neutral-90};
   --Fill-Support: #{$Common-00};
   --Fill-Assistive: #{$Brown-95};
 
