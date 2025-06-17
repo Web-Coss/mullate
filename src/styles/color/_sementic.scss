@@ -37,10 +37,10 @@
   --Background-Alternative: #{$Brown-90};
 
   // Status
-  --Status-Negative: #{$Red-50};
-  --Status-Cautionary: #{$Yellow-50};
-  --Status-Positive: #{$Green-50};
-  --Status-Info: #{$Orange-50};
+  --Status-Error: #{$Red-50};
+  --Status-Warning: #{$Yellow-50};
+  --Status-Success: #{$Green-50};
+  --Status-Info: #{$Blue-50};
 
   // Static
   --Static-White: #{$Common-00};

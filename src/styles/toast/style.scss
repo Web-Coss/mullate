@@ -5,15 +5,15 @@
 }
 
 .progress-success {
-  background-color: var(--Status-Negative) !important;
+  background-color: var(--Status-Success) !important;
 }
 
 .progress-error {
-  background-color: var(--Status-Negative) !important;
+  background-color: var(--Status-Error) !important;
 }
 
 .progress-warning {
-  background-color: var(--Status-Cautionary) !important;
+  background-color: var(--Status-Warning) !important;
 }
 
 .progress-info {

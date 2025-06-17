@@ -18,6 +18,7 @@ export default function LocaleLayout({
     return (
         <div className="layout">
             <Sidebar/>
+            <div id="modal" />
             <div className="main">
                 {children}
             </div>

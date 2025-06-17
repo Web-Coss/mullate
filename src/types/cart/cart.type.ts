@@ -5,5 +5,9 @@ export interface CartItem {
 }
 
 export interface CartProps {
-    items: CartItem[]
+    items: CartItem[];
+    increase: (name: string) => void;
+    decrease: (name: string) => void;
+    remove: (name: string) => void;
+    reset: () => void;
 }

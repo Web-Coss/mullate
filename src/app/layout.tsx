@@ -1,5 +1,6 @@
 import type {Metadata} from "next";
 import "src/styles/global.style.scss";
+import {ToastContainer} from "react-toastify";
 
 export const metadata: Metadata = {
     title: "모라떼",
@@ -16,6 +17,7 @@ export default function RootLayout({children}: Readonly<{
         <html lang="ko">
         <body>
         {children}
+        <ToastContainer/>
         </body>
         </html>
     );
