@@ -23,10 +23,10 @@ type Props = {
 };
 
 export default async function LocaleLayout({ children, params }: Props) {
-    let { locale } = params;
+    const { locale } = params;
 
     if (!hasLocale(routing.locales, locale)) {
-        locale = 'en';
+        notFound();
     }
 
     let messages;
