@@ -1,28 +1,28 @@
-import { NextRequest, NextResponse } from "next/server"
+import createMiddleware from 'next-intl/middleware';
+import { NextRequest } from 'next/server';
 
-const DEFAULT_LOCALE = "ko"
+const locales = ['ko', 'en'];
+const defaultLocale = 'ko';
 
-export function middleware(req: NextRequest) {
-    const { pathname } = req.nextUrl
+const intlMiddleware = createMiddleware({
+    locales,
+    defaultLocale,
+});
 
-    // 루트 경로만 접근한 경우
-    if (pathname === "/") {
-        const url = req.nextUrl.clone()
-        url.pathname = `/${DEFAULT_LOCALE}}`
-        return NextResponse.redirect(url)
+export function middleware(request: NextRequest) {
+    const { pathname } = request.nextUrl;
+    console.log('🔍 [middleware] pathname:', pathname);
+
+    if (pathname === '/') {
+        const url = request.nextUrl.clone();
+        url.pathname = `/${defaultLocale}`;
+        console.log('➡️ Redirecting to:', url.pathname);
+        return Response.redirect(url);
     }
 
-    // /ko, /en이 이미 있는 경우는 패스
-    if (/^\/(ko|en)(\/|$)/.test(pathname)) {
-        return NextResponse.next()
-    }
-
-    // 그 외 경로도 ko로 리디렉션
-    const url = req.nextUrl.clone()
-    url.pathname = `/${DEFAULT_LOCALE}${pathname}`
-    return NextResponse.redirect(url)
+    return intlMiddleware(request);
 }
 
 export const config = {
-    matcher: ["/((?!_next|api|favicon.ico|static).*)"],
-}
+    matcher: ['/', '/(ko|en)/:path*'],
+};

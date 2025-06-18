@@ -1,9 +1,9 @@
-import type { NextConfig } from "next";
+const createNextIntlPlugin = require('next-intl/plugin');
 
-const nextConfig: NextConfig = {
-    eslint: {
-        ignoreDuringBuilds: true,
+const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
+
+module.exports = withNextIntl({
+    experimental: {
+        serverActions: false,
     },
-};
-
-export default nextConfig;
+});
