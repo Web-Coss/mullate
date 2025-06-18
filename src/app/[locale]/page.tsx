@@ -1,9 +1,5 @@
 import { redirect } from 'next/navigation';
 
-type Props = {
-    params: { locale: string };
-};
-
-export default function LocaleRoot({ params }: Props) {
+export default function LocaleRoot({ params }: { params: { locale: string } }) {
     redirect(`/${params.locale}/main`);
 }
