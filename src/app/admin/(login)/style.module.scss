@@ -1,0 +1,33 @@
+@use "flex" as *;
+@use "typography" as *;
+
+.login {
+  @include flex-center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.logo_container {
+  h1 {
+    color: var(--Primary-Normal);
+    @include Title1-Bold;
+  }
+}
+
+.form {
+  width: 400px;
+  @include flex-column;
+  @include flex-center;
+  padding: 50px 30px;
+  gap: 20px;
+  border-radius: var(--Shape-Small);
+  background: var(--Fill-Neutral);
+  box-shadow: 2px 4px 4px 0 var(--Line-Neutral);
+}
+
+.text_field_container {
+  width: 100%;
+  @include flex-column;
+  @include flex-center;
+  gap: 20px;
+}

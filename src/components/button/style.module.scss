@@ -1,0 +1,45 @@
+.button {
+  font-size: 18px;
+  font-weight: 500;
+  height: 56px;
+  border: none;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &.standard {
+    background-color: var(--Primary-Normal);
+    color: var(--Static-White);
+  }
+
+  &.white {
+    background-color: var(--Fill-Disabled);
+    color: var(--Label-Strong);
+    border: 1px solid var(--Label-Disabled);
+  }
+
+  &.gray {
+    background-color: var(--Fill-Normal);
+    color: var(--Label-Assisitive);
+  }
+
+  &.selected {
+    background-color: var(--Primary-Disable);
+    color: var(--Static-White);
+    border: 1px solid var(--Primary-Assisitive);
+  }
+
+  &.small {
+    width: 136px;
+  }
+
+  &.large {
+    width: 100%;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}

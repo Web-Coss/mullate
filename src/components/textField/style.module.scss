@@ -1,0 +1,57 @@
+@use "src/styles/function/flex" as *;
+@use "src/styles/fonts/typography" as *;
+
+.text_field_container {
+  @include flex-column;
+  position: relative;
+  width: 100%;
+}
+
+.label {
+  @include Label-Medium;
+  color: var(--label-Netural);
+  margin-bottom: 5px;
+}
+
+.text_field {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: var(--Shape-Medium);
+  margin-top: 5px;
+  padding: 18px;
+  @include Body-Medium;
+  border: none;
+  background-color: var(--Fill-Alternative);
+  color: var(--label-Strong);
+
+  ::placeholder {
+    color: var(--label-Strong);
+  }
+
+  &:focus {
+    border-color: var(--primary-Normal);
+    outline: none;
+  }
+}
+
+.text_field.error {
+  border: 1px solid;
+  border-color: var(--status-Error);
+  color: var(--status-Error);
+}
+
+.select-icon {
+  position: absolute;
+  top: 20px;
+
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+}
+
+.error-message {
+  color: var(--status-Error);
+  font-size: 14px;
+  font-weight: 400;
+}
