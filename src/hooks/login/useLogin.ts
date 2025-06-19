@@ -29,9 +29,7 @@ const useLogin = () => {
         if (!loginData.password.trim()) return Toast("info", "비밀번호를 입력해주세요.");
 
         try {
-            const res = await login(loginData);
-
-            const {accessToken, refreshToken} = res.data;
+            const { accessToken, refreshToken } = await login(loginData);
 
             Token.setToken(ACCESS_TOKEN, accessToken);
             Token.setToken(REFRESH_TOKEN, refreshToken);
@@ -40,6 +38,7 @@ const useLogin = () => {
             router.push("/main");
         } catch (error) {
             Toast("error", "정보를 다시 확인해주세요.");
+            console.error(error);
         }
     }, [loginData, router]);
 

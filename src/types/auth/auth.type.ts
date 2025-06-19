@@ -4,14 +4,10 @@ export interface Login {
 }
 
 export interface Response {
-    data : {
-        accessToken: string;
-        refreshToken: string;
-    }
+    accessToken: string;
+    refreshToken: string;
 }
 
 export interface NewAccessToken {
-    data: {
-        accessToken: string;
-    }
+    accessToken: string;
 }
