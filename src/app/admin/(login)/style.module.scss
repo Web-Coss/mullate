@@ -1,5 +1,5 @@
-@use "flex" as *;
-@use "typography" as *;
+@use "src/styles/function/flex" as *;
+@use "src/styles/fonts/typography" as *;
 
 .login {
   @include flex-center;
